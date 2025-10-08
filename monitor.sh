@@ -6,7 +6,7 @@ EXTERNAL="DP-2"
 if hyprctl monitors all | grep -q "^Monitor $EXTERNAL"; then
     # HDMI есть — включаем только его и отключаем eDP
     hyprctl keyword monitor "$INTERNAL,disable"
-    hyprctl keyword monitor "$EXTERNAL,3440x1440@99.98,0x0,1.0"
+    hyprctl keyword monitor "$EXTERNAL,3440x1440@120,0x0,1.0"
 else
     # HDMI нет — включаем только eDP и отключаем HDMI
     hyprctl keyword monitor "$EXTERNAL,disable"
